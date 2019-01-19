@@ -1,6 +1,6 @@
 package algorithm.method
-import data.PreferenceTable
+import data.PreferenceRow
 
 object GreedyMethod {
-  implicit def greedyMethod[A, B]: MatchingMethod[A, B] = (as: PreferenceTable[A, B], bs: PreferenceTable[B, A]) => ???
+  implicit def greedyMethod[A, B]: MatchingMethod[A, B] = (as: PreferenceRow[A, B], bs: PreferenceRow[B, A]) => ???
 }

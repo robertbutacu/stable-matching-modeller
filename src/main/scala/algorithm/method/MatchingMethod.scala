@@ -1,7 +1,7 @@
 package algorithm.method
 
-import data.PreferenceTable
+import data.PreferenceRow
 
 trait MatchingMethod[A, B] {
-  def matchData(as: PreferenceTable[A,B], bs: PreferenceTable[B, A])
+  def matchData(as: PreferenceRow[A,B], bs: PreferenceRow[B, A])
 }
