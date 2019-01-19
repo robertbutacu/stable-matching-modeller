@@ -1,7 +1,7 @@
 package algorithm.inferer
 
 import data.{PreferenceRow, PreferenceValue}
-import types.Types.{ValidIndex, PreferenceIndex, Score}
+import types.Types.{ValidIndex, Score}
 import eu.timepit.refined._
 
 trait MatchesInferer[A, B] {
@@ -11,9 +11,9 @@ trait MatchesInferer[A, B] {
         .sortWith((s1, s2) => s1._2 >= s2._2)
         .map(_._1)
         .zipWithIndex
-        .map(m => refineV[ValidIndex](m._2 + 1) match {
-          case Left(err) => ???
-          case Right(v) => PreferenceValue(m._1, v: PreferenceIndex)
+        .map(m => refineV[ValidIndex](m._2) match {
+          case Left(err) => ??? // this should never happen, zipping with index insures this
+          case Right(v) => PreferenceValue(m._1, v)
         })
     )
   }

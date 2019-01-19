@@ -6,6 +6,6 @@ import eu.timepit.refined.numeric.Greater
 object Types {
   type Score           = Double
 
-  type ValidIndex      = Greater[shapeless.nat._1]
+  type ValidIndex      = Greater[shapeless.nat._0]
   type PreferenceIndex = Refined[Int, ValidIndex]
 }
