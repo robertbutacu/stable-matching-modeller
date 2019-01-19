@@ -1,4 +1,4 @@
-package subject
+package data
 
 import types.Types.PreferenceIndex
 

@@ -1,0 +1,3 @@
+package data
+
+trait B
