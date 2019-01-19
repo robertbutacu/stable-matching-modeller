@@ -1,4 +1,6 @@
-package algorithm.method
+package algorithm.method.impl
+
+import algorithm.method.MatchingMethod
 import data.PreferenceRow
 
 object GreedyMethod {
