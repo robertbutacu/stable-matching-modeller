@@ -1,3 +1,3 @@
 package subject
 
-case class PreferenceTable(subject: Subject, preferences: List[PreferenceValue])
+case class PreferenceTable[A, B](subject: A, preferences: List[PreferenceValue[B]])

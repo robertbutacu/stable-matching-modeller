@@ -1,3 +1,3 @@
 package subject
 
-trait Subject
+trait B
